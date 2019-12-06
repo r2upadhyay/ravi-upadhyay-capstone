@@ -1,0 +1,29 @@
+.tasklist {
+
+  &__header {
+    display: flex;
+    justify-content: center;
+
+    &--textfield {
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid blue;
+      width: 165px;
+    }
+
+    &--button {
+      margin: 10px;
+      margin-right: 0;
+      height: 40px;
+      background-color: #0066FF;
+      color: #FFF;
+      border: 2px solid #0066FF;
+    }
+
+    button:hover {
+      background-color: #003399;
+      border: 2px solid #003399;
+      cursor: pointer;
+    }
+  }  
+}

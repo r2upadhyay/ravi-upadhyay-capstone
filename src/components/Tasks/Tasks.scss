@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt&display=swap');
+
+.list {
+
+  display: flex;
+  justify-content: center;
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    list-style: none;
+    background-color: hotpink;
+    width: 235px;
+    padding: 0;
+  }
+}
+
+.specificTask {
+  color: #333;
+  background-color: rgba(255,255,255,.5);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  list-style: none;
+  transition: background-color .2s ease-out;
+
+  font-family: 'Rock Salt', cursive;
+}
+
+li.hover {
+  background-color: blue;
+  cursor: pointer;
+}
+
+// TEST:
+.strike {
+  background-color: red;
+}
