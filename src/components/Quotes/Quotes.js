@@ -25,7 +25,7 @@ class Quotes extends Component {
     console.log(this.state.qod);
     
     return(
-      <div className="quote-container">
+      <div className="quotes-container">
         <h2>{(this.state.qod)?this.state.qod.contents.quotes[0].title:null}</h2>
         <p>
           {(this.state.qod)?this.state.qod.contents.quotes[0].quote:null}

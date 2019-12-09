@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-// import Http from "../http";
+import './Weather.scss';
 import {PROXY_URL, WEATHER_API_URL} from "../../constants/constants";
 import axios from 'axios';
 import ExpiredStorage from "expired-storage";
@@ -60,6 +60,9 @@ class Weather extends Component {
             />
             <div>
               {this.state.weather.summary} / {Math.ceil((this.state.weather.temperature - 32) * (5/9))} <sup>o</sup>C
+            </div>
+            <div>
+              <a href="https://darksky.net/poweredby/">Powered by Dark Sky</a>
             </div>
           </div>
         )
