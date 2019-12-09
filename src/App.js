@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import List from './components/List/List';
 import Tasks from './components/Tasks/Tasks';
 import Quotes from './components/Quotes/Quotes';
+import Weather from './components/Weather/Weather';
 
 // var destination = document.querySelector("#container");
 
@@ -15,6 +16,7 @@ class App extends Component {
       <List />
       <Tasks />
       <Quotes />
+      <Weather />
     </div>
   );
   }

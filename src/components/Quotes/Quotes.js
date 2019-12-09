@@ -8,7 +8,6 @@ class Quotes extends Component {
     this.state = {
       qod: null
     };
-    // this.getQuote = this.getQuote.bind(this);
   }
 
   componentDidMount() {
@@ -42,9 +41,3 @@ class Quotes extends Component {
 }
 
 export default Quotes
-
-// data.value
-
-// response.contents.quotes.quote
-
-// {this.state.quote}
