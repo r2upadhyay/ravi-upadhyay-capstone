@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-// import './App.scss';
+import './App.scss';
 import Header from './components/Header/Header';
 import List from './components/List/List';
 import Tasks from './components/Tasks/Tasks';
@@ -14,13 +14,15 @@ class App extends Component {
   return (
     <div>
       <Header />
-      <div className='tasks-container'>
-        <List />
-        <Tasks />
-      </div>
-      <div className='sidebar'>
-        <Quotes className='sidebar__block' />
-        <Weather className='sidebar__block' />
+      <div className='section-container'>
+        <div className='tasks-container'>
+          <List />
+          <Tasks />
+        </div>
+        <div className='sidebar'>
+          <Quotes className='sidebar__block' />
+          <Weather className='sidebar__block' />
+        </div>
       </div>
     </div>
   );

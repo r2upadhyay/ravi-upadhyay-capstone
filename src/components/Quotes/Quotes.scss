@@ -1,4 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
+
 .quotes-container {
-  margin: 0 50px;
+  width: 100%;
   background-color: gold;
+
+  &__details {
+    margin: 0 20px;
+    padding: 1px 0;
+
+    &--header {
+      font-family: 'Bangers', cursive;
+      font-size:30px;
+    }
+  }
 }

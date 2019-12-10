@@ -11,7 +11,7 @@ class Quotes extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://quotes.rest/qod.json?category=inspire')
+    axios.get('http://quotes.rest/qod.json?category=funny')
       .then(response => {
         console.log(response);
         this.setState({qod:response.data});
@@ -26,15 +26,18 @@ class Quotes extends Component {
     
     return(
       <div className="quotes-container">
-        <h2>{(this.state.qod)?this.state.qod.contents.quotes[0].title:null}</h2>
-        <p>
-          {(this.state.qod)?this.state.qod.contents.quotes[0].quote:null}
-        </p>
-        <p>
-          --{(this.state.qod)?this.state.qod.contents.quotes[0].author:null}
-        </p>
-        <p>&copy; {(this.state.qod)?this.state.qod.contents.copyright:null}
-        </p>
+        <div className="quotes-container__details">
+          {/* <h2>{(this.state.qod)?this.state.qod.contents.quotes[0].title:null}</h2> */}
+          <h2 className="quotes-container__details--header">Read this!</h2>
+          <p>
+            {(this.state.qod)?this.state.qod.contents.quotes[0].quote:null}
+          </p>
+          <p>
+            --{(this.state.qod)?this.state.qod.contents.quotes[0].author:null}
+          </p>
+          <p>&copy; {(this.state.qod)?this.state.qod.contents.copyright:null}
+          </p>
+        </div>
       </div>
     );
   }

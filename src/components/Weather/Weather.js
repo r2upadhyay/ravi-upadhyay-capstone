@@ -49,20 +49,22 @@ class Weather extends Component {
       if (this.state.weather.icon) {
         weatherBlock = (
           <div className="weather-container">
-            <h2>Weather in Toronto</h2>
-            <ReactAnimatedWeather
-              icon={this.state.weather.icon.toUpperCase()
-                .split('-')
-                .join('_')}
-              color="#999999"
-              size={100}
-              animate={true}
-            />
-            <div>
-              {this.state.weather.summary} / {Math.ceil((this.state.weather.temperature - 32) * (5/9))} <sup>o</sup>C
-            </div>
-            <div>
-              <a href="https://darksky.net/poweredby/">Powered by Dark Sky</a>
+            <div className="weather-container__details">
+              <h2 className="weather-container__details--header">Toronto Outside</h2>
+              <ReactAnimatedWeather
+                icon={this.state.weather.icon.toUpperCase()
+                  .split('-')
+                  .join('_')}
+                color="#999999"
+                size={100}
+                animate={true}
+              />
+              <div>
+                {this.state.weather.summary} / {Math.ceil((this.state.weather.temperature - 32) * (5/9))} <sup>o</sup>C
+              </div>
+              <div>
+                <a href="https://darksky.net/poweredby/">Powered by Dark Sky</a>
+              </div>
             </div>
           </div>
         )

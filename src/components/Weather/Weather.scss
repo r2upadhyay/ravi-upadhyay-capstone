@@ -1,4 +1,19 @@
 .weather-container {
-  margin: 50px;
+  // margin: 50px;
+  width: 100%;
   background-color: lightblue;
+
+  &__details {
+    margin: 0 20px;
+    padding: 20px 0;
+
+    &--header {
+      font-family: 'Bangers', cursive;
+      font-size: 30px;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
 }
