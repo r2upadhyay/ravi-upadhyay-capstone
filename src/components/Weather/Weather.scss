@@ -1,7 +1,7 @@
 .weather-container {
   // margin: 50px;
   width: 100%;
-  background-color: lightblue;
+  background-color: rgb(113, 80, 235);
 
   &__details {
     margin: 0 20px;
@@ -12,8 +12,12 @@
       font-size: 30px;
     }
   }
+  @media (min-width: 768px) {
+    border-radius: 50px;
+  }
 }
 
 a {
   text-decoration: none;
+  font-size: small;
 }

@@ -50,7 +50,7 @@ class Weather extends Component {
         weatherBlock = (
           <div className="weather-container">
             <div className="weather-container__details">
-              <h2 className="weather-container__details--header">Toronto Outside</h2>
+              <h2 className="weather-container__details--header">Toronto Weather</h2>
               <ReactAnimatedWeather
                 icon={this.state.weather.icon.toUpperCase()
                   .split('-')

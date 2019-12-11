@@ -1,3 +1,7 @@
+html {
+  background-color: cyan;
+}
+
 .section-container {
   @media (min-width: 768px) {
     display: flex;
@@ -10,7 +14,7 @@
 
   @media (min-width: 768px) {
     width: 40%;
-    text-align: left;
+    text-align: center;
   }
 }
 

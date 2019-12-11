@@ -7,8 +7,6 @@ import Tasks from './components/Tasks/Tasks';
 import Quotes from './components/Quotes/Quotes';
 import Weather from './components/Weather/Weather';
 
-// var destination = document.querySelector("#container");
-
 class App extends Component {
   render() {
   return (
@@ -20,8 +18,8 @@ class App extends Component {
           <Tasks />
         </div>
         <div className='sidebar'>
-          <Quotes className='sidebar__block' />
           <Weather className='sidebar__block' />
+          <Quotes className='sidebar__block' />
         </div>
       </div>
     </div>

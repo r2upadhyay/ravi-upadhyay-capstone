@@ -11,7 +11,7 @@ class Quotes extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://quotes.rest/qod.json?category=funny')
+    axios.get('http://quotes.rest/qod.json?category=inspire')
       .then(response => {
         console.log(response);
         this.setState({qod:response.data});
@@ -28,7 +28,7 @@ class Quotes extends Component {
       <div className="quotes-container">
         <div className="quotes-container__details">
           {/* <h2>{(this.state.qod)?this.state.qod.contents.quotes[0].title:null}</h2> */}
-          <h2 className="quotes-container__details--header">Read this!</h2>
+          <h2 className="quotes-container__details--header">Today's quote</h2>
           <p>
             {(this.state.qod)?this.state.qod.contents.quotes[0].quote:null}
           </p>

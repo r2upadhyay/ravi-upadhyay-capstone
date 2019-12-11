@@ -15,6 +15,8 @@ class List extends Component {
     this.addTask = this.addTask.bind(this);
     // Mark task as completed
     this.completedTask = this.completedTask.bind(this);
+    // Mark task as deleted
+    // this.deleteTask = this.deleteTask.bind(this);
   }
 
   onChange = event => {
@@ -44,8 +46,7 @@ class List extends Component {
   }
 
   completeTask = (targetItem) => {
-    // TODO: 
-    // { key: iqwjiqjw, text: wijdwi, completed: false }
+
     targetItem.completed = true;
     
     let itemsArray = this.state.items;
@@ -72,14 +73,14 @@ class List extends Component {
     });
   }
 
-  // completedTask(key) {
-  //   var filteredItems = this.state.items.filter(function(item) {
-  //     return (item.key !== key);
-  //   });
+  // remove task from list
 
-  //   this.setState({
-  //     items: filteredItems
-  //   });
+  // deleteTask(key) {
+  //   const filteredTasks = this.state.items.filter(items => 
+  //     items.key !== key);
+  //     this.setState ({
+  //       items:filteredTasks
+  //     })
   // }
 
   completedTask(index, event) {
@@ -93,15 +94,11 @@ class List extends Component {
     return (
       <div className="tasklist">
         <div className="tasklist__header">
-          <form action="" method="get" onSubmit={this.addTask}>
+          <form action="" method="get" id="formID" onSubmit={this.addTask}>
             <input className="tasklist__header--textfield" ref={(a) => this.inputElement = a} 
             type="text" name="task" id="task" placeholder="Do something!" required/>
-              {/* <input
-                id="chk"
-                onChange={() => this.completedTask(completed)}
-                type="checkbox"
-              />{" "} */}
             <button className= "tasklist__header--button" type="submit">Do it!</button>
+            <script type="text/javascript">document.formID.task.focus();</script>
           </form>
         </div>
         <Tasks entry={this.state.items} delete={this.completedTask} completeHandler={this.completeTask}/>

@@ -19,13 +19,13 @@ class Tasks extends Component {
       <li
         className={`specificTask ${item.completed ? 'strike' : ''}`}
         key= {item.key}
-        onClick={() => { this.props.completeHandler(item); }}>
+        onClick={() => { this.props.completeHandler(item) }}>
         {item.text}
+        {/* <p className="remove"
+        onClick={() => { this.props.deleteTask(item.key) }}>Remove</p> */}
       </li>
     );
   }
-  // class="specificTask strike"
-  // class="specificTask"
 
   render() {
     if (!this.props.entry){
